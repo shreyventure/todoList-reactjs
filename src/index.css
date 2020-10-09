@@ -1,13 +1,82 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.spinner {
+  width: 100%;
+}
+.completeBTN {
+  color: rgb(0, 170, 170);
+  transition: 0.2s ease-in-out;
+}
+.completeBTN:hover {
+  font-size: 110%;
+  color: rgb(0, 212, 212);
+}
+.deleteBTN {
+  transition: 0.2s ease-in-out;
+  color: rgb(217, 83, 79);
+}
+.deleteBTN:hover {
+  font-size: 110%;
+  color: rgb(235, 110, 110);
+}
+.cut {
+  text-decoration: line-through;
+}
+.incompleteBTN {
+  color: orange;
+  transition: 0.2s ease-in-out;
+}
+.incompleteBTN:hover {
+  font-size: 120%;
+  color: rgb(255, 188, 64);
+}
+.alertLocal {
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
 }
