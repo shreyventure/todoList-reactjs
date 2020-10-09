@@ -4,12 +4,12 @@ import { Navbar, Nav } from "react-bootstrap";
 const Header = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="#home">TODO</Navbar.Brand>
+      <Navbar.Brand href="/">TODO List</Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link href="#deets">About</Nav.Link>
-          <Nav.Link eventKey={2} href="#memes">
+          <Nav.Link href="#">About</Nav.Link>
+          <Nav.Link eventKey={2} href="#">
             Contact Us
           </Nav.Link>
         </Nav>
