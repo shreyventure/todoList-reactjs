@@ -12,7 +12,8 @@ function App() {
 
   useEffect(() => {
     setLoading(false);
-
+    const localTodos = localStorage.getItem("todos");
+    if (localTodos) setTodos(JSON.parse(localTodos));
     // eslint-disable-next-line
   }, []);
 
@@ -20,6 +21,7 @@ function App() {
     let list = todos;
     const item = list.findIndex((todo) => todo.id === id);
     list[item].completed = !list[item].completed;
+    localStorage.setItem("todos", JSON.stringify(list));
     setTodos([...list]);
   };
 
@@ -31,12 +33,14 @@ function App() {
       userId: Date.now(),
     };
     setLoading(true);
+    localStorage.setItem("todos", JSON.stringify([item, ...todos]));
     setTodos([item, ...todos]);
     setLoading(false);
   };
   const onDelete = (id) => {
     let items = todos.filter((item) => item.id !== id);
     setLoading(true);
+    localStorage.setItem("todos", JSON.stringify([...items]));
     setTodos([...items]);
     setLoading(false);
   };
