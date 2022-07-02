@@ -4,9 +4,9 @@ import { ListGroup } from "react-bootstrap";
 const TodoItem = ({ todo, onComplete, onDelete }) => {
   return (
     <>
-      <ListGroup.Item className="lead d-flex justify-content-between">
+      <ListGroup.Item className="lead d-flex justify-content-between align-items-center">
         <p className={todo.completed ? "cut" : "noCut"}>{todo.title}</p>
-        <div className="d-flex justify-content-around ml-3">
+        <div className="d-flex justify-content-around ml-3 align-items-center">
           {todo.completed ? (
             <i
               className="fas fa-times mx-3 incompleteBTN"
