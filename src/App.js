@@ -54,7 +54,7 @@ function App() {
       {loading ? (
         <Loading />
       ) : (
-        <div className="container" style={{ minHeight: "70vh" }}>
+        <div className="container" style={{ minHeight: "75vh" }}>
           <Routes>
             <Route
               path="/"
@@ -69,7 +69,7 @@ function App() {
                     />
                   ) : (
                     <div>
-                      <h4>No items added.</h4>
+                      <h4 className="mt-5">No items added.</h4>
                     </div>
                   )}
                 </>

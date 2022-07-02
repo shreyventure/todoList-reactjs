@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Button, Alert } from "react-bootstrap";
+import { Form, Alert } from "react-bootstrap";
 
 const TodoForm = ({ onSubmit }) => {
   const [inputText, setInputText] = useState("");
@@ -19,7 +19,7 @@ const TodoForm = ({ onSubmit }) => {
   };
   return (
     <>
-      <Form className="mt-5">
+      <Form className="mt-5" onSubmit={onSubmitEvent}>
         {alert ? (
           <Alert
             className="alertLocal"
@@ -31,7 +31,7 @@ const TodoForm = ({ onSubmit }) => {
             A todo cannot be empty.
           </Alert>
         ) : null}
-        <Form.Group className="d-flex">
+        <Form.Group className="d-flex ">
           <Form.Control
             className="lead"
             style={{ height: "50px", fontSize: "18px" }}
@@ -40,9 +40,11 @@ const TodoForm = ({ onSubmit }) => {
             value={inputText}
             placeholder="Add a todo..."
           />
-          <Button className="ml-3 btn btn-success" onClick={onSubmitEvent}>
-            add
-          </Button>
+          <input
+            type="submit"
+            value="Add"
+            className="btn btn-success add-btn"
+          />
         </Form.Group>
       </Form>
     </>

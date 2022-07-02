@@ -25,3 +25,20 @@ body {
 .head-link {
   text-decoration: none;
 }
+
+.head-link:hover {
+  color: #fff;
+}
+
+.footer-link {
+  color: #f1f1f1;
+  opacity: 0.5;
+}
+.footer-link:hover {
+  color: #f1f1f1;
+  opacity: 0.8;
+}
+
+.add-btn {
+  margin-left: 10px;
+}

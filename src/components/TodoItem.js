@@ -9,12 +9,12 @@ const TodoItem = ({ todo, onComplete, onDelete }) => {
         <div className="d-flex justify-content-around ml-3">
           {todo.completed ? (
             <i
-              className="fas fa-times mr-3 incompleteBTN"
+              className="fas fa-times mx-3 incompleteBTN"
               onClick={() => onComplete(todo.id)}
             ></i>
           ) : (
             <i
-              className="fas fa-check mr-3 completeBTN"
+              className="fas fa-check mx-3 completeBTN"
               onClick={() => onComplete(todo.id)}
             ></i>
           )}
