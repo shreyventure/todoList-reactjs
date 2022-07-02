@@ -5,6 +5,8 @@ import Todos from "./components/Todos";
 import TodoForm from "./components/TodoForm";
 import Footer from "./components/Footer";
 import "./App.css";
+import { Routes, Route, Link } from "react-router-dom";
+import About from "./Pages/About";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -52,14 +54,29 @@ function App() {
         <Loading />
       ) : (
         <div className="container" style={{ minHeight: "70vh" }}>
-          <TodoForm onSubmit={onSubmit} />
-          {todos.length > 0 ? (
-            <Todos todos={todos} onComplete={onComplete} onDelete={onDelete} />
-          ) : (
-            <div>
-              <h4>No items added.</h4>
-            </div>
-          )}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <TodoForm onSubmit={onSubmit} />
+                  {todos.length > 0 ? (
+                    <Todos
+                      todos={todos}
+                      onComplete={onComplete}
+                      onDelete={onDelete}
+                    />
+                  ) : (
+                    <div>
+                      <h4>No items added.</h4>
+                    </div>
+                  )}
+                </>
+              }
+            />
+
+            <Route path="about" element={<About />} />
+          </Routes>
         </div>
       )}
       <Footer />
