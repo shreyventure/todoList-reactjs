@@ -10,12 +10,11 @@ const About = () => {
         local-storage to save states, hence it works differently for each
         browser.
       </p>
-      <p className="mt-5 bg-dark d-flex text-light p-2 align-items-center">
-        <strong className="mr-2 font-weight-bold align-content-center ">
+      <p className="mt-5 bg-dark d-flex text-light p-2 align-items-center shadow">
+        <strong className="mx-2 font-weight-bold align-content-center ">
           Version:
         </strong>
         1.2.0
-        <p />
       </p>
     </div>
   );

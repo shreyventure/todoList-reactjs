@@ -5,8 +5,9 @@ import Todos from "./components/Todos";
 import TodoForm from "./components/TodoForm";
 import Footer from "./components/Footer";
 import "./App.css";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -76,6 +77,7 @@ function App() {
             />
 
             <Route path="about" element={<About />} />
+            <Route path="contact" element={<Contact />} />
           </Routes>
         </div>
       )}
