@@ -4,7 +4,13 @@ const Contact = () => {
   return (
     <div>
       <h1 className="mt-3">Contact</h1>
-      <p>Hi! I'm Shreyas. Lets get in touch.😊</p>
+      <p>
+        Hi! I'm Shreyas. Lets get in touch.
+        <span role="img" aria-label="smiley">
+          😊
+        </span>
+        .
+      </p>
       <form className="mt-5">
         <div className=" form-floating my-3">
           <input
